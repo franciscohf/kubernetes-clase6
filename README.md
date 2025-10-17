@@ -34,6 +34,8 @@ Aplicacion Nginx
 3. Acceder:
    - URL: http://192.168.49.2:30200
    - minikube service webapp-service
+
+---
 ┌───────────┬────────────────┬─────────────┬───────────────────────────┐
 │ NAMESPACE │      NAME      │ TARGET PORT │            URL            │
 ├───────────┼────────────────┼─────────────┼───────────────────────────┤
@@ -45,6 +47,8 @@ Starting tunnel for service webapp-service
 ├───────────┼────────────────┼─────────────┼────────────────────────┤
 │ default   │ webapp-service │             │ http://127.0.0.1:44599 │
 └───────────┴────────────────┴─────────────┴────────────────────────┘
+---
+
 
 ### 4. Cómo Probar
 
@@ -146,27 +150,41 @@ Pod Template:
   Volumes:
 
    html-volume:
+
     Type:          ConfigMap (a volume populated by a ConfigMap)
+
     Name:          webapp-configmap
+    
     Optional:      false
+
   Node-Selectors:  <none>
+
   Tolerations:     <none>
 
 Conditions:
 
   Type           Status  Reason
   ----           ------  ------
+
   Available      True    MinimumReplicasAvailable
+
   Progressing    True    ReplicaSetUpdated
+
 OldReplicaSets:  webapp-deployment-678d44c9f8 (4/4 replicas created)
+
 NewReplicaSet:   webapp-deployment-56df784bd8 (3/3 replicas created)
 
 Events:
 
   Type    Reason             Age   From                   Message
   ----    ------             ----  ----                   -------
+
   Normal  ScalingReplicaSet  44m   deployment-controller  Scaled up replica set webapp-deployment-678d44c9f8 from 0 to 3
+
   Normal  ScalingReplicaSet  15m   deployment-controller  Scaled up replica set webapp-deployment-678d44c9f8 from 3 to 5
+
   Normal  ScalingReplicaSet  4s    deployment-controller  Scaled up replica set webapp-deployment-56df784bd8 from 0 to 2
+
   Normal  ScalingReplicaSet  4s    deployment-controller  Scaled down replica set webapp-deployment-678d44c9f8 from 5 to 4
+
   Normal  ScalingReplicaSet  4s    deployment-controller  Scaled up replica set webapp-deployment-56df784bd8 from 2 to 3
