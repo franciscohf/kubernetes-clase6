@@ -45,7 +45,6 @@ Aplicacion Nginx
 
 Starting tunnel for service webapp-service
 
-
 ┌───────────┬────────────────┬─────────────┬────────────────────────┐
 │ NAMESPACE │      NAME      │ TARGET PORT │          URL           │
 ├───────────┼────────────────┼─────────────┼────────────────────────┤
