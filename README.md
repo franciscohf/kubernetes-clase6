@@ -36,9 +36,9 @@ Aplicacion Nginx
    - minikube service webapp-service
 
 
- NAMESPACE       NAME       TARGET PORT             URL  
-           
- default    webapp-service  80           http://192.168.49.2:30200 
+ NAMESPACE  NAME    TARGET  PORT    URL  
+
+ default    webapp-service  80  http://192.168.49.2:30200 
 
 Starting tunnel for service webapp-service
 
